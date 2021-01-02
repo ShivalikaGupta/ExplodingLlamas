@@ -1,0 +1,96 @@
+Instal ocaml and opam if you haven't already. 
+
+There is two test files: test.ml and testAI.ml
+
+Run make test
+
+type in no for playing with AI like so: 
+Do you want an AI to play with you? (yes / no): no
+
+type in a,b,c,d for each player like so:
+Hi player 1! Enter your name:a
+Hi player 2! Enter your name:b
+Hi player 3! Enter your name:c
+Hi player 4! Enter your name:d
+
+type in 1 for the next 4 questions that come up like so:
+Which card should be placed on the deck right now? Let 1 is the first element, 
+2 be the next...1
+Here are the cards you can choose from: Attack ProphetLlama
+Which card should be placed on the deck right now? Let 1 is the first element, 
+2 be the next...1
+.Here are the cards you can choose from: ProphetLlama Attack Shuffle
+Which card should be placed on the deck right now? Let 1 is the first element, 
+2 be the next...1
+Here are the cards you can choose from: Attack Shuffle
+Which card should be placed on the deck right now? Let 1 is the first element, 
+2 be the next...1
+
+type in b like so:
+What player should give you a card?: What player should give you a card?: 
+[d; b; a]
+b
+
+type in Defuse like so:
+What card do you want to give to c?
+Your hand is currently: [Defuse, Favor, Skip, Favor, SurfingLlama]
+Defuse
+
+(AADBBBAA one by one)
+
+type in A like so:
+Enter A, B, C, or D: A
+
+type in A like so:
+Enter A, B, C, or D: A
+
+type in D like so:
+Enter A, B, C, or D: D
+
+type in B like so:
+Enter A, B, C, or D: B
+
+type in B like so:
+Enter A, B, C, or D: B
+
+type in B like so:
+Enter A, B, C, or D: B
+
+type in A like so:
+Enter A, B, C, or D: A
+
+type in A like so:
+Enter A, B, C, or D: A
+
+Run make testAI
+
+type in yes for playing with AI like so: 
+Do you want an AI to play with you? (yes / no): yes
+
+type in 2 for number of AIs like so:
+how many AIs do you want? (1-3): 3
+
+type in 2 greedy AIs and a & b as name of players:
+Do you want the first AI to be greedy_AI or 
+        the frugal_AI? (greedy / frugal): greedy
+Do you want the next AI to be greedy_AI or 
+        the frugal_AI? (greedy / frugal): greedy
+Hi player 1! Enter your name: a
+Hi player 2! Enter your name: b
+
+type in 1 for the next 2 inputs like so:
+Here are the cards you can choose from: (1) Shuffle, (2) Attack, (3) 
+ProphetLlamaWhich card should be placed on the deck right now? 
+1 for the first card, 2 for the next card, and 3 for the last card 
+1
+Here are the cards you can choose from: (1) Attackor (2) ProphetLlamaWhich card 
+should be placed on the deck right now? 
+1 for the first card, or 2 for the next card 
+1
+
+type in greedy_computer2 like so:
+........greedy_computer2
+
+
+
+

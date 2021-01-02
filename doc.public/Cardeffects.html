@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Command.html">
+<link rel="next" href="Riddles.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Author" rel="Chapter" href="Author.html">
+<link title="Deck" rel="Chapter" href="Deck.html">
+<link title="Player" rel="Chapter" href="Player.html">
+<link title="Gamestate" rel="Chapter" href="Gamestate.html">
+<link title="Command" rel="Chapter" href="Command.html">
+<link title="Cardeffects" rel="Chapter" href="Cardeffects.html">
+<link title="Riddles" rel="Chapter" href="Riddles.html"><title>Cardeffects</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Command.html" title="Command">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Riddles.html" title="Riddles">Next</a>
+</div>
+<h1>Module <a href="type_Cardeffects.html">Cardeffects</a></h1>
+
+<pre><span id="MODULECardeffects"><span class="keyword">module</span> Cardeffects</span>: <code class="code">sig</code> <a href="Cardeffects.html">..</a> <code class="code">end</code></pre><hr width="100%">
+
+<pre><span id="VALshuffle"><span class="keyword">val</span> shuffle</span> : <code class="type"><a href="Gamestate.html#TYPEgame">Gamestate.game</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">shuffle g</code> is the same as Gamestae.deck, but all elements are reordered
+    randomly</p>
+</div>
+</div>
+
+<pre><span id="VALprophet_llama"><span class="keyword">val</span> prophet_llama</span> : <code class="type"><a href="Gamestate.html#TYPEgame">Gamestate.game</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">Prophet_llama g</code> Rearranges the deck from g using 2 inputs from the 
+    player who played it (the current player in g)</p>
+</div>
+</div>
+
+<pre><span id="VALrank_card"><span class="keyword">val</span> rank_card</span> : <code class="type"><a href="Deck.html#TYPEcard">Deck.card</a> -> int</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">rank_card card</code> takes a card and returns the value of the card,
+    which corrresponds to how good the card is, higher is better</p>
+</div>
+</div>
+
+<pre><span id="VALcompare_card_use"><span class="keyword">val</span> compare_card_use</span> : <code class="type"><a href="Deck.html#TYPEcard">Deck.card</a> -> <a href="Deck.html#TYPEcard">Deck.card</a> -> int</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">compare_card_use card1 card2</code> compares card1 with card2. If card1
+    has a better rank than card2, <code class="code">compare_card_use</code> returns 1, if card2 has
+    a better rank than card1, <code class="code">compare_card_use</code> returns -1, otherwise 0</p>
+</div>
+</div>
+
+<pre><span id="VALskip"><span class="keyword">val</span> skip</span> : <code class="type"><a href="Gamestate.html#TYPEgame">Gamestate.game</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">skip player</code> does a pass action, without the drawing requirement</p>
+</div>
+</div>
+
+<pre><span id="VALattack"><span class="keyword">val</span> attack</span> : <code class="type"><a href="Gamestate.html#TYPEgame">Gamestate.game</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">attack player</code> forces the player to take two turns</p>
+</div>
+</div>
+
+<pre><span id="VALfavor"><span class="keyword">val</span> favor</span> : <code class="type"><a href="Gamestate.html#TYPEgame">Gamestate.game</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">favor player1 player2</code> forces player2 to give a card to player 1</p>
+</div>
+</div>
+
+<pre><span id="VALcheck_turn"><span class="keyword">val</span> check_turn</span> : <code class="type"><a href="Gamestate.html#TYPEgame">Gamestate.game</a> -> <a href="Player.html#TYPEplayer">Player.player</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">check_turn g current_player</code> checks if the current_player was attacked
+    and forces said player to take another turn if the player has been 
+    attacked, otherwise it will be the next player's turn</p>
+</div>
+</div>
+
+<pre><span id="VALdefuse"><span class="keyword">val</span> defuse</span> : <code class="type"><a href="Gamestate.html#TYPEgame">Gamestate.game</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">defuse game</code> negates the losing condition for current player who drew
+    the KABLLAMA! card</p>
+</div>
+</div>
+
+<pre><span id="VALinsert_card_at"><span class="keyword">val</span> insert_card_at</span> : <code class="type"><a href="Deck.html#TYPEcard">Deck.card</a> list -> <a href="Deck.html#TYPEcard">Deck.card</a> -> int -> <a href="Deck.html#TYPEcard">Deck.card</a> list</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">insert_card_at card_lst card i</code> inserts <code class="code">card</code> at position <code class="code">i</code> in
+    <code class="code">card_lst</code></p>
+</div>
+</div>
+
+<pre><span id="VALuse_card"><span class="keyword">val</span> use_card</span> : <code class="type"><a href="Deck.html#TYPEcard">Deck.card</a> -> <a href="Gamestate.html#TYPEgame">Gamestate.game</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">use_card card</code> activates the card and mutates something, returns unit</p>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,8 @@
+#directory "_build";;
+#require "ounit2";;
+#require "ANSITerminal";;
+#load "deck.cmo";;
+#load "command.cmo";;
+#load "gamestate.cmo";;
+#load "player.cmo";;
+#load "cardeffects.cmo";;
